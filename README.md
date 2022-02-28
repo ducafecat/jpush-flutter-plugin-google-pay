@@ -1,4 +1,5 @@
 [![QQ Group](https://img.shields.io/badge/QQ%20Group-862401307-red.svg)]()
+
 # JPush Flutter Plugin
 
 ### 安装
@@ -6,14 +7,14 @@
 在工程 pubspec.yaml 中加入 dependencies
 
 ```
-  
+
 //github  集成
 dependencies:
   jpush_flutter:
     git:
-      url: git://github.com/jpush/jpush-flutter-plugin.git
+      url: git://github.com/ducafecat/jpush-flutter-plugin-google-pay.git
       ref: master
-      
+
 // pub 集成
 dependencies:
   jpush_flutter: 2.1.4
@@ -33,7 +34,7 @@ android: {
     ...
     ndk {
 	//选择要添加的对应 cpu 类型的 .so 库。
-	abiFilters 'armeabi', 'armeabi-v7a', 'x86', 'x86_64', 'mips', 'mips64', 'arm64-v8a',        
+	abiFilters 'armeabi', 'armeabi-v7a', 'x86', 'x86_64', 'mips', 'mips64', 'arm64-v8a',
     }
 
     manifestPlaceholders = [
@@ -41,7 +42,7 @@ android: {
         JPUSH_APPKEY : "appkey", // NOTE: JPush 上注册的包名对应的 Appkey.
         JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
     ]
-  }    
+  }
 }
 ```
 
@@ -59,5 +60,4 @@ import 'package:jpush_flutter/jpush_flutter.dart';
 
 **注意** : 需要先调用 JPush.setup 来初始化插件，才能保证其他功能正常工作。
 
- [参考](./documents/APIs.md)
-
+[参考](./documents/APIs.md)
